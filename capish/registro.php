@@ -13,7 +13,7 @@ try {
         $pass = $db_parts['pass'];
         $dbname = ltrim($db_parts['path'], '/');
         
-        $dsn = "pgsql:host=$host;port=$port;dbname=$dbname sslmode=require";
+        $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;sslmode=require";
         $pdo = new PDO($dsn, $user, $pass);
     } else {
         // Variables locales de respaldo
@@ -118,3 +118,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !$error) {
 </div>
 </body>
 </html>
+
